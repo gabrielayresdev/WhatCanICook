@@ -31,40 +31,45 @@
     }
   }
 
-  #input {
-    width: 100%;
-    padding: 0.8rem 0.5rem;
-    font-size: 1.15rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    outline: none;
-    transition: border 0.3s;
-
-    &:focus {
-      border-color: #bbb;
-    }
-  }
-
-  .addBtn {
-    all: unset;
-    padding: 0.5rem;
-    background: #e56399;
+  form {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    color: #fff;
-    height: 1.25rem;
-    letter-spacing: +2px;
-    height: 20px;
-    cursor: pointer;
+    flex-direction: column;
 
-    img {
-      height: 100%;
+    #input {
+      width: 100%;
+      padding: 0.8rem 0.5rem;
+      font-size: 1.15rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      outline: none;
+      transition: border 0.3s;
+
+      &:focus {
+        border-color: #bbb;
+      }
     }
 
-    align-self: flex-end;
+    .addBtn {
+      all: unset;
+      padding: 0.5rem;
+      background: #e56399;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      color: #fff;
+      height: 1.25rem;
+      letter-spacing: +2px;
+      height: 20px;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+      }
+
+      align-self: flex-end;
+    }
   }
 
   .list {
