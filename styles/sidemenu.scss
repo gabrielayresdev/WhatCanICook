@@ -1,0 +1,90 @@
+.ingredients {
+  height: 100%;
+  padding: 2rem;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+
+  & > span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: +2px;
+    }
+
+    .image-container {
+      max-width: 4rem;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      box-shadow: -10px 10px 10px -3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  #input {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border 0.3s;
+
+    &:focus {
+      border-color: #bbb;
+    }
+  }
+
+  .addBtn {
+    all: unset;
+    padding: 0.5rem;
+    background: #e56399;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+    height: 1.25rem;
+    letter-spacing: +2px;
+    height: 20px;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+
+    align-self: flex-end;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ingredient {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: 4px 4px 15px -3px rgba(0, 0, 0, 0.1);
+
+      color: #999;
+      font-size: 1.25rem;
+      letter-spacing: +1px;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

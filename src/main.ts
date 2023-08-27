@@ -3,12 +3,12 @@ import { findByIngredients, request } from "./request/api";
 
 export {};
 
-const button = document.querySelector("button");
+const button = document.getElementById("addBtn");
 let ingredients: string[] = [];
 
 async function handleClick(event: MouseEvent) {
   event.preventDefault();
-  const input = document.querySelector<HTMLInputElement>("#adicionar");
+  const input = document.querySelector<HTMLInputElement>("#input");
   if (input) {
     ingredients = [...ingredients, ...getIngredients(input.value)];
     const data = await request(findByIngredients, ingredients, 10);
