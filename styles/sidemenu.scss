@@ -71,12 +71,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    margin-top: 1rem;
 
     .ingredient {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
-      padding: 0.5rem;
+      padding: 0.7rem;
       box-shadow: 4px 4px 15px -3px rgba(0, 0, 0, 0.1);
 
       color: #999;
@@ -86,6 +87,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fe5e41;
+        color: #fff;
+      }
     }
   }
 }

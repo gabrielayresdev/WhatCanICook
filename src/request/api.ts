@@ -9,10 +9,10 @@ export function findRecipes(name: string, amount: number) {
   return `${base}/complexSearch?apiKey=${key}&query=${name}&number=${amount}`;
 }
 
-export async function request(
+export async function request<T>(
   callback: (...args: any[]) => string,
   ...args: any[]
-) {
+): Promise<T | undefined> {
   const url = callback(...args);
   try {
     const response = await fetch(url);
