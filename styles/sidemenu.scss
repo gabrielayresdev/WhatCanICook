@@ -1,3 +1,4 @@
+@import "./variables.scss";
 .ingredients {
   height: 100%;
   padding: 2rem;
@@ -100,6 +101,16 @@
         background-color: #fe5e41;
         color: #fff;
       }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    height: fit-content;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+
+    .list {
+      justify-content: center;
     }
   }
 }
