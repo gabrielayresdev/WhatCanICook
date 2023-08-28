@@ -20,6 +20,7 @@ main {
   min-height: 100vh;
 
   @media (max-width: $tablet-breakpoint) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
