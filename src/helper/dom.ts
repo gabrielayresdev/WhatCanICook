@@ -33,4 +33,37 @@ export default class Dom {
     setIngredients(aux);
     this.generateIngredientsElements(ingredients);
   };
+
+  generateLoadingCards(amount: number) {
+    const card = document.createElement("div");
+    card.classList.add("loading");
+    card.innerHTML = `
+            <div class="image-loading"></div>
+            <div class="text-loading">
+              <div class="title-loading"></div>
+              <div class="p-loading"></div>
+            </div>
+    `;
+    for (let i = 0; i < amount; i++) {
+      this.element?.appendChild(card.cloneNode(true));
+    }
+  }
+
+  removeLoadingCards() {
+    const cards = document.querySelectorAll(".loading");
+    cards.forEach((card) => {
+      card.remove();
+    });
+  }
+
+  disableBtn(btn: EventTarget) {
+    if (btn instanceof HTMLButtonElement) {
+      btn.disabled = true;
+    }
+  }
+  enableBtn(btn: EventTarget) {
+    if (btn instanceof HTMLButtonElement) {
+      btn.disabled = false;
+    }
+  }
 }

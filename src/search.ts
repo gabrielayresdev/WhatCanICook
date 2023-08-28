@@ -1,3 +1,4 @@
+import Dom from "./helper/Dom";
 import { ingredients } from "./menu";
 import { findByIngredients, request } from "./request/api";
 
@@ -30,13 +31,25 @@ interface Recipe {
 const button = document.getElementById("search");
 const load = document.getElementById("load");
 function initSearch() {
-  async function handleClick() {
-    const url = findByIngredients(ingredients, 10);
-    const data = await request<Recipe[]>(url.href);
-    if (data) {
+  async function handleClick({ target }: MouseEvent) {
+    if (ingredients.length > 0) {
+      const dom = new Dom(".recipes .list");
+      dom.generateLoadingCards(10);
+      if (target) {
+        dom.disableBtn(target);
+      }
+
       document.querySelector(".recipes")?.classList.add("active");
       document.querySelector(".no-recipe")?.classList.remove("active");
-      handleData(data);
+      const url = findByIngredients(ingredients, 10);
+      const data = await request<Recipe[]>(url.href);
+      if (data) {
+        handleData(data);
+      }
+      dom.removeLoadingCards();
+      if (target) {
+        dom.enableBtn(target);
+      }
     }
   }
 
@@ -87,15 +100,25 @@ function initSearch() {
     });
   }
 
-  async function loadMore() {
+  async function loadMore({ target }: MouseEvent) {
     const url = findByIngredients(
       ingredients,
       10 + document.querySelectorAll(".recipe").length
     );
 
+    const dom = new Dom(".recipes .list");
+    dom.generateLoadingCards(10);
+    if (target) {
+      dom.disableBtn(target);
+    }
+
     const data = await request<Recipe[]>(url.href);
     if (data) {
       handleData(data.slice(document.querySelectorAll(".recipe").length));
+    }
+    dom.removeLoadingCards();
+    if (target) {
+      dom.enableBtn(target);
     }
   }
 
