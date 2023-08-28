@@ -1,5 +1,5 @@
-import Dom from "./helper/Dom.ts";
-import { getIngredients, removeEquals } from "./helper/handleText.ts";
+import Dom from "./helper/Dom.js";
+import { getIngredients, removeEquals } from "./helper/handleText.js";
 
 const button = document.getElementById("addBtn");
 let ingredients: string[] = [];

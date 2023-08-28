@@ -1,6 +1,6 @@
-import Dom from "./helper/Dom.ts";
-import { ingredients } from "./menu.ts";
-import { findByIngredients, request } from "./request/api.ts";
+import Dom from "./helper/Dom.js";
+import { ingredients } from "./menu.js";
+import { findByIngredients, request } from "./request/api.js";
 
 interface Ingredient {
   aisle: string;
