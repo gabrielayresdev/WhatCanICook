@@ -18,6 +18,7 @@
   <body>
     <header></header>
     <main>
+      <!-- Menu -->
       <div class="ingredients">
         <span class="ingredients-header">
           <div class="image-container">
@@ -34,7 +35,8 @@
         </form>
         <div class="list"></div>
       </div>
-      <div class="no-recipe">
+      <!-- Seção exibida quando não há receitas -->
+      <div class="no-recipe active">
         <img src="assets/undraw_cooking_p7m1.svg" alt="No recipe found" />
         <h2>
           No recipes found. Add ingredients and hit the button to
@@ -42,53 +44,13 @@
         </h2>
         <button id="search" class="search">What can I cook?</button>
       </div>
-      <div class="recipes active">
+      <!-- Receitas -->
+      <div class="recipes">
         <h2 class="amount">You can do these 2</h2>
 
-        <div class="list">
-          <div class="recipe">
-            <div class="image-container">
-              <img
-                src="https://spoonacular.com/recipeImages/633469-312x231.jpg"
-                alt="Image of Baked Brabant Potatoes"
-              />
-            </div>
-            <div class="text-container">
-              <h3 class="name">Baked Brabant Potatoes</h3>
-              <p class="used">Uses all 5 ingredients</p>
-              <span class="needed">You need 3 more ingredients</span>
-              <div class="like">
-                <span>1523</span>
-                <img
-                  src="assets/heart-regular.svg"
-                  class="heart"
-                  alt="Like recipe"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="recipe">
-            <div class="image-container">
-              <img
-                src="https://spoonacular.com/recipeImages/633469-312x231.jpg"
-                alt="Image of Baked Brabant Potatoes"
-              />
-            </div>
-            <div class="text-container">
-              <h3 class="name">Baked Brabant Potatoes</h3>
-              <p class="used">Uses all 5 ingredients</p>
-              <span class="needed">You need 3 more ingredients</span>
-              <div class="like">
-                <img
-                  src="assets/heart-regular.svg"
-                  class="heart"
-                  alt="Like recipe"
-                />
-                1523
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="list"></div>
+
+        <button class="load" id="load">View More</button>
       </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
