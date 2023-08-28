@@ -64,6 +64,11 @@
       letter-spacing: +2px;
       height: 20px;
       cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #e976a6;
+      }
 
       img {
         height: 100%;
@@ -84,7 +89,7 @@
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 0.7rem;
-      box-shadow: 4px 4px 15px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: -4px 4px 15px -3px rgba(0, 0, 0, 0.1);
 
       color: #999;
       font-size: 1.25rem;
