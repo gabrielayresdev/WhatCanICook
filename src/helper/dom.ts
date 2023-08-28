@@ -1,4 +1,4 @@
-import { ingredients, setIngredients } from "../menu.ts";
+import { ingredients, setIngredients } from "../menu";
 export default class Dom {
   private element: HTMLElement | null;
 

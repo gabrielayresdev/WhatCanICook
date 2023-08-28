@@ -1,5 +1,5 @@
-import { initMenu } from "./menu.ts";
-import { initSearch } from "./search.ts";
+import { initMenu } from "./menu";
+import { initSearch } from "./search";
 
 initMenu();
 initSearch();

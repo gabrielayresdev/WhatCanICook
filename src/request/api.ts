@@ -1,5 +1,5 @@
 const base = "https://api.spoonacular.com/recipes/";
-const key = "99d1e5d154f14ce2ab43cf9a5007d320";
+const key = "105f46c0155e4cdcb0fdc2c3069c2a67";
 
 export function findByIngredients(ingredients: string[], amount: number) {
   const url = new URL(`${base}/findByIngredients`);

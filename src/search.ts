@@ -1,6 +1,6 @@
 import Dom from "./helper/Dom";
-import { ingredients } from "./menu.ts";
-import { findByIngredients, request } from "./request/api.ts";
+import { ingredients } from "./menu";
+import { findByIngredients, request } from "./request/api";
 
 interface Ingredient {
   aisle: string;
@@ -43,6 +43,8 @@ function initSearch() {
       document.querySelector(".no-recipe")?.classList.remove("active");
       const url = findByIngredients(ingredients, 10);
       const data = await request<Recipe[]>(url.href);
+      console.log(request);
+      console.log(data);
       if (data) {
         handleData(data);
       }
