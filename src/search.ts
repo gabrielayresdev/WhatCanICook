@@ -1,4 +1,4 @@
-import Dom from "./helper/Dom.ts";
+import Dom from "./helper/Dom";
 import { ingredients } from "./menu.ts";
 import { findByIngredients, request } from "./request/api.ts";
 

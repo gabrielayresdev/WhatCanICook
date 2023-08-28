@@ -1,4 +1,4 @@
-import Dom from "./helper/Dom.ts";
+import Dom from "./helper/Dom";
 import { getIngredients, removeEquals } from "./helper/handleText.ts";
 
 const button = document.getElementById("addBtn");
