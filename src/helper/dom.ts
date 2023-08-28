@@ -1,4 +1,4 @@
-import { ingredients, setIngredients } from "../menu";
+import { ingredients, setIngredients } from "../menu.ts";
 export default class Dom {
   private element: HTMLElement | null;
 
@@ -64,6 +64,15 @@ export default class Dom {
   enableBtn(btn: EventTarget) {
     if (btn instanceof HTMLButtonElement) {
       btn.disabled = false;
+    }
+  }
+  updateCounter() {
+    const amount = document.querySelector(".amount");
+    const qtd = document.querySelectorAll(".recipe").length;
+    if (amount instanceof HTMLElement) {
+      amount.innerHTML = `${
+        qtd > 0 ? `${qtd} recipe${qtd > 1 ? "s" : ""} found` : "No recipe found"
+      }`;
     }
   }
 }

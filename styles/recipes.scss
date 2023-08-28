@@ -28,13 +28,13 @@
       box-shadow: -10px 10px 10px -3px rgba(0, 0, 0, 0.1);
       transition: all 0.3s;
       cursor: pointer;
+      max-height: 7.5rem;
 
       &:hover {
         transform: translateY(-10px);
       }
 
       .image-container {
-        max-height: 7.5rem;
         img {
           height: 100%;
         }
@@ -48,20 +48,6 @@
         position: relative;
         padding: 0.5rem;
 
-        .like {
-          display: flex;
-          align-items: center;
-          gap: 0.2rem;
-          line-height: 100%;
-          font-size: 0.875rem;
-
-          position: absolute;
-          right: 1rem;
-          top: 10px;
-          img {
-            max-width: 15px;
-          }
-        }
         .name {
           font-size: 1.25rem;
         }
@@ -115,14 +101,9 @@
       .recipe {
         gap: 0.2rem;
         flex-direction: column;
+        max-height: fit-content;
         .image-container {
           width: 100%;
-          max-height: 100%;
-        }
-        .like {
-          span {
-            display: none;
-          }
         }
       }
     }

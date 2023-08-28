@@ -1,6 +1,6 @@
-import Dom from "./helper/Dom";
-import { ingredients } from "./menu";
-import { findByIngredients, request } from "./request/api";
+import Dom from "./helper/Dom.ts";
+import { ingredients } from "./menu.ts";
+import { findByIngredients, request } from "./request/api.ts";
 
 interface Ingredient {
   aisle: string;
@@ -50,6 +50,8 @@ function initSearch() {
       if (target) {
         dom.enableBtn(target);
       }
+
+      dom.updateCounter();
     }
   }
 
@@ -86,14 +88,6 @@ function initSearch() {
                   }`
                 : ``
             }</span>
-            <div class="like">
-            <span>${recipe.likes}</span>
-            <img
-                src="assets/heart-regular.svg"
-                class="heart"
-                alt="Like recipe"
-            />
-            </div>
         </div>
         `;
       list?.appendChild(elem);
@@ -120,6 +114,7 @@ function initSearch() {
     if (target) {
       dom.enableBtn(target);
     }
+    dom.updateCounter();
   }
 
   button?.addEventListener("click", handleClick);
